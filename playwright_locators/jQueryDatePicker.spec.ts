@@ -116,7 +116,7 @@ test.describe('dropdown Tests', () => {
     test('Booking.com Date Picker Test - Check-in and Check-out', async ({ page }) => {
         await page.goto('https://www.booking.com/');
         //const dismissBtn = page.locator('button[aria-label="Dismiss sign in information."]');
-        ßconst closeBtn = page.locator('button[aria-label="Dismiss sign in information."]');
+        const closeBtn = page.locator('button[aria-label="Dismiss sign in information."]');
 
         // Click only if visible
         if (await closeBtn.isVisible()) {
