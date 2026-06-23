@@ -12,6 +12,10 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  //grep : /@sanity/, // sanity test cases run
+  //grep:/@sanity/, // specifyinh tag by pavan
+  //grepInvert:/@regression/
+  //grep:(?=.@sanity)(?=.@regression/, // specifyinh tag by pavan
   timeout: 50000, // 40 seconds for each test
   testDir: 'playwright_locators',
   /* Run tests in files in parallel */
@@ -39,6 +43,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      //fullyParallel: true
     },
 
     {
